@@ -20,6 +20,8 @@ def create_input_window():
     button = tk.Button(input_window, text="Submit", command=save_prompt)
     button.pack()
 
+    
+
     input_window.mainloop()
 
 def create_response_window(response):
