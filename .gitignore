@@ -2,4 +2,4 @@
 # prevents leakage of secret keys
 # when you see this uncomment the line below
 
-#config.py
+config.py
