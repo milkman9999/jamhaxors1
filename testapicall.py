@@ -1,9 +1,9 @@
 import openai
-openai.api_key= "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"
+from config import API_KEY
+openai.api_key= API_KEY
 
-prompt = "Hello ai"
+prompt = "Say this is a test"
 
-prompt = "Hello"
-response = openai.Completion.create(engine="text-davinci-003", prompt=prompt, max_tokens=1000)
+response = openai.Completion.create(engine="text-davinci-001", prompt=prompt, max_tokens=10)
 
-print(response.choices[0]['text'])
+print(response)
