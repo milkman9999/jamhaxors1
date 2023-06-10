@@ -1,6 +1,5 @@
 import openai
 import config
-import api_interact.PromptHandler as PromptHandler
 
 # set key from config
 openai.api_key=config.API_KEY

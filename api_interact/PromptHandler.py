@@ -1,5 +1,5 @@
 import tkinter as tk
-import api_interact.ApiHandler as ApiHandler
+import ApiHandler
 
 def create_input_window():
     def save_prompt():
@@ -7,7 +7,7 @@ def create_input_window():
         send_prompt(prompt, 0.5, 100)
         input_window.destroy()
     def send_prompt(prompt, temperature, max_tokens):
-        ApiHandler.gen_from_prompt(prompt, temperature, max_tokens)
+        create_response_window(ApiHandler.gen_from_prompt(prompt, temperature, max_tokens))
 
     input_window = tk.Tk()
 
@@ -41,7 +41,7 @@ def create_response_window(response):
 create_input_window()
 
 # Simulating response received from some process
-response = "This is the response message."
+response = "This is the default response message."
 
 # Create response window with the received response
 create_response_window(response)
