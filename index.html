@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gym Tracker Website</title>
+    <title>Gym Website</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -14,9 +14,15 @@
         <fieldset>
             <form id = "information-form" method="get">
                 <label for="build" id="build-label">Build: <input type="text" id="build" name="information" placeholder="Skinny" required></label>
-                <label for="goal" id="goal-label">Name: <input type="text" id="goal" name="information" placeholder="Lose weight" required></label>
-                <input type="submit">
+                <label for="age" id="number-label">Age: <input type="number" id="number" min="5" max="100" name="information" placeholder="Age"></label>
+                <label for="sex" id="number-label">Sex: <input type="text" id="sex" name="information" placeholder="Female"></label>
+                <label for="goal">Goal(s):<textarea id="goal" rows="3" cols="30" placeholder="I want to lose weight.." name="information"></textarea></label>
+
+                <input type="submit" id="submit" value="Submit">
             </form>
+        </fieldset>
+        <fieldset>
+            <p>Here is your personalized workout:</p>
         </fieldset>
 </body>
 </html>
