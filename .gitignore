@@ -1,5 +1,4 @@
 # specifies for git to ignore certain files when committing
 # prevents leakage of secret keys
-# when you see this uncomment the line below
 
 config.py
