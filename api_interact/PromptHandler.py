@@ -33,6 +33,13 @@ def create_response_window(response):
     label = tk.Label(response_window, text="Response:")
     label.pack()
 
+    def display_text_one_by_one(text, index=0):
+        if index < len(text):
+            response_label.config(text=text[:index+1])
+            index += 1
+            response_label.after(100, lambda: display_text_one_by_one(text, index))
+
+
     response_label = tk.Label(response_window, text=response)
     response_label.pack()
 
