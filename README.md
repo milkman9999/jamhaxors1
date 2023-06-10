@@ -1,2 +1,2 @@
-# jamhaxors1
-jam hacks repository
+# Gym ai website
+Gym ai website
