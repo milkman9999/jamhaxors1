@@ -6,26 +6,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Gym Tracker Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    style="background-color:green;"
-    <h1>Gym Tracker Website</h1>
-    <form action="simplify.php" method="get">
-        <p>Interested in finding out </p>
-        <input type="text" name="numerator" placeholder="numerator">
-        <input type="text" name="denominator" placeholder="denominator">
-        <input type="submit">
-    </form>
+<h1>Gym Tracker Website</h1>
+   
+   <label>What</label>
 </body>
 </html>
-<!-- Path: simplify.php -->
-<?php
-$num = $_GET["numerator"];
-$den = $_GET["denominator"];
-$gcd = gmp_gcd($num, $den);
-echo $num / $gcd . "/" . $den / $gcd;
-?>
-<!-- Path: index.html -->
-<!--the submit button doesnt work pls fix-->
 
+<script src="app.js"></script>
+<!--Fault tolerance/graceful degradation if javascript is deactivated-->
+<noscript>You need to enable JavaScript to view the full site.</noscript>
