@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <h1>Gym Website</h1>
-    <form action="simplify.php" method="get">
-        <p>Find out about workouts for your goal!</p>
-        <input type="text" name="Build" placeholder="Buff">
-        <input type="text" name="denominator" placeholder="denominator">
-        <input type="submit">
-    </form>
+    <h1 id="title">Gym Website</h1>
+    <p id = "description">Discover personalized workouts!</p>
+        <fieldset>
+            <form id = "information-form" method="get">
+                <label for="build" id="build-label">Build: <input type="text" id="build" name="information" placeholder="Skinny" required></label>
+                <label for="goal" id="goal-label">Name: <input type="text" id="goal" name="information" placeholder="Lose weight" required></label>
+                <input type="submit">
+            </form>
+        </fieldset>
 </body>
 </html>
