@@ -159,26 +159,24 @@
                         <label style="color:black" for="days" id="number-label">How many days per week do you have available each day to dedicate towards fitness? <input type="text" id="days" name="information" placeholder="30 minutes" required></label>
                         <label style="color:black" for="time">On those days, how much of your time is available for fitness?
                                  <!-- value attribute allows there to be a useful value sent in when form is submitted -->
+                                 
+                                 <select id="time" name="information">
+                                    <!--value attribute allows there to be a useful value sent in when form is submitted-->
+                                    <option value="">(select one)</option>
+                                    <option value="1">Less than 30 minutes</option>
+                                    <option value="2">1-2 hours</option>
+                                    <option value="3">3-5 Hours</option>
+                                    <option value="4">More</option>
+                                </select>
 
-                                <div class="dropdown">
-                                <button class="dropbtn">(select)</button>
-                                <div class="dropdown-content">
-                                   <a href="1">Less than 30 minutes</a>
-                                   <a href="2">1-2 hours</a>
-                                   <a href="3">3-5 hours</a>
-                                   <a href="4">More</a>
-                                </div>
-                               </div>
-                           </div>
                         <label style="color:black" for="equipment">What equipment do you have available? 
-                          <div class="dropdown">
-                             <button class="dropbtn">(select)</button>
-                             <div class="dropdown-content">
-                                <a href="1">None</a>
-                                <a href="2">Minimal home equipment</a>
-                                <a href="3">Access to a gym</a>
-                             </div>
-                            </div>
+                            <select id="equipment" name="information">
+                                <!--value attribute allows there to be a useful value sent in when form is submitted-->
+                                <option value="">(select one)</option>
+                                <option value="1">None</option>
+                                <option value="2">Minimal home equipment</option>
+                                <option value="3">Access to a gym</option>
+                            </select>
                             <p></p>
                        <label for="goals">What are your personal goals? 
                           <p></p>
