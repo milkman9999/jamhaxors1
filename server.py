@@ -10,9 +10,9 @@ def initialize_the_boy():
 
 @app.route('/form/', methods =["GET", "POST"])
 def gfg():
-    print('in gfg', file=sys.stdout)
+    print('in gfg')
     if request.method == "POST":
-       print('in post req', file=sys.stdouts)
+       print('in post req')
        # getting inputs from html form index
        age = request.form.get("age")
        weight = request.form.get("weight")
@@ -22,7 +22,7 @@ def gfg():
        print(age)
        print(weight)
        print(time)
-       return jsonify({'age':age}, {'weight':weight}, {'sex':sex}, {'days':days}, {'time':time})
+       return jsonify({'age':age, 'weight':weight, 'sex':sex, 'days':days, 'time':time})
     #    return "your info: age ="+age+", weight ="+weight+", sex ="+sex+", days ="+days+", time ="+time
  
 if __name__=='__main__':
