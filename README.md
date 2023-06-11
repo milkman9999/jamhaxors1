@@ -1,2 +1,4 @@
-# Gym ai website
-Gym ai website
+# VAROS prototype
+
+This repository targets Python 3.11
+Requires flask for full functionality
