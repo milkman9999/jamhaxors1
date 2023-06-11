@@ -32,6 +32,42 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <style>
+         .dropbtn {
+           background-color: #737373;
+           color: white;
+           padding: 16px;
+           font-size: 16px;
+           border: none;
+         }
+         
+         .dropdown {
+           position: relative;
+           display: inline-block;
+         }
+         
+         .dropdown-content {
+           display: none;
+           position: absolute;
+           background-color: #f1f1f1;
+           min-width: 160px;
+           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+           z-index: 1;
+         }
+         
+         .dropdown-content a {
+           color: black;
+           padding: 12px 16px;
+           text-decoration: none;
+           display: block;
+         }
+         
+         .dropdown-content a:hover {background-color: #ddd;}
+         
+         .dropdown:hover .dropdown-content {display: block;}
+         
+         .dropdown:hover .dropbtn {background-color: 737373;}
+         </style>
    </head>
    <body>
       <!-- header section start -->
@@ -89,21 +125,25 @@
                      </div>
                         <fieldset>
                            <form id = "information-form" method="get">
-                               <label for="age" id="number-label">Age: <input type="number" id="number" min="5" max="100" name="information" placeholder="Age" required></label>
-                               <label for="weight" id="number-label">Weight (kg): <input type="number" id="number" min="0" max="200" name="information" placeholder="Weight" required></label>
+                               <label for="age" id="number-label">Age: <input type="number" id="number" min="5" max="100" name="information" placeholder="Age" style="color:black" required></label>
+                               <label for="weight" id="number-label">Weight (kg): <input type="number" id="number" min="0" max="200" name="information" placeholder="Weight" style="color:black" required></label>
                                <label for="sex" id="number-label">Sex: <input type="text" id="sex" name="information" placeholder="Female" required></label>
-                               <label for="days" id="number-label">How many days per week do you have available each day to dedicate towards fitness?: <input type="text" id="days" name="information" placeholder="" required></label>
+                               <label for="days" id="number-label">How many days per week do you have available each day to dedicate towards fitness? <input type="text" id="days" name="information" placeholder="30 minutes" required></label>
                                <label for="time">On those days, how much of your time is available for fitness?
-                                  <select id="time" name="information"> 
                                         <!-- value attribute allows there to be a useful value sent in when form is submitted -->
-                                      <option value="">(select one)</option>
-                                          <option value="1">Less than 30 minutes</option>
-                                          <option value="2">1-2 hours</option>
-                                          <option value="3">3-5 Hours</option>
-                                          <option value="4">More</option>
-                                   </select>
+
+                                       <div class="dropdown">
+                                       <button class="dropbtn">select</button>
+                                       <div class="dropdown-content">
+                                          <a href="1">Less than 30 minutes</a>
+                                          <a href="2">1-2 hours</a>
+                                          <a href="3">3-5 hours</a>
+                                          <a href="4">More</a>
+                                       </div>
+                                      </div>
+                                      <style>
+                                      </style>
                                   </div>
-                               <label></label>
                                <label for="equipment">What equipment do you have available? 
                                    <select id="equipment" name="information">
                                    <option value="">(select one)</option>"
