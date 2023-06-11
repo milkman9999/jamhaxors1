@@ -141,19 +141,19 @@
                                           <a href="4">More</a>
                                        </div>
                                       </div>
-                                      <style>
-                                      </style>
                                   </div>
                                <label for="equipment">What equipment do you have available? 
-                                   <select id="equipment" name="information">
-                                   <option value="">(select one)</option>"
-                                   <option value="1">None</option>
-                                   <option value="2">Minimal home equipment</option>
-                                   <option value="3">Access to a gym</option>
-                               </select> 
-                               <label></label>
-                               <label for="goal">Goal(s):<textarea id="goal" rows="3" cols="30" placeholder="I want to lose weight.." name="information" required></textarea></label>
-               
+                                 <div class="dropdown">
+                                    <button class="dropbtn">select</button>
+                                    <div class="dropdown-content">
+                                       <a href="1">None</a>
+                                       <a href="2">Minimal home equipment</a>
+                                       <a href="3">Access to a gym</a>
+                                    </div>
+                                   </div>
+                                   <p>&nbsp;</p>
+                              <label for="goals">What are your goals? 
+                              <textarea id="goal" rows="3" cols="30" placeholder="I want to lose weight.." name="information" required></textarea></label>
                                <input type="submit" id="submit" value="Submit">
                            </form> 
                        </fieldset>
