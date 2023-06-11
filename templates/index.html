@@ -5,6 +5,42 @@
     <meta charset="UTF-8">
     <title>Gym Website</title>
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <style>
+        .dropbtn {
+          background-color: #737373;
+          color: white;
+          padding: 10px;
+          font-size: 10px;
+          border: none;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .dropdown-content a:hover {background-color: #ddd;}
+        
+        .dropdown:hover .dropdown-content {display: block;}
+        
+        .dropdown:hover .dropbtn {background-color: 737373;}
+        </style>
 </head>
 </html>
    <head>
@@ -104,6 +140,58 @@
          <!-- banner section end -->
       </div>
       <!-- header section end -->
+
+      <!-- information section start -->
+      <div class="services_section layout_padding">
+        <div class="container">
+           <h1 class="services_taital">Create your workout plan! </h1>
+           <p class="services_text">Answer the following questions to create a customized routine:</p>
+           <div class="services_section_2">
+              <div class="row">
+                 <div class="col-md-4">
+                    <div><img src="images/muscledude.png" class="services_img"></div>
+                    <p>&nbsp;</p>
+                 </div>
+              </div>
+                 <fieldset>
+                    <form id = "information-form" method="get">
+                        <label style="color:black" for="age" id="number-label">Age: <input type="number" id="number" min="5" max="100" name="information" placeholder="Age" style="color:black;" required></label>
+                        <label style="color:black" for="weight" id="number-label">Weight (kg): <input type="number" id="number" min="0" max="200" name="information" placeholder="Weight" style="color:black" required></label>
+                        <label style="color:black" for="sex" id="number-label">Sex: <input type="text" id="sex" name="information" placeholder="Female" required></label>
+                        <label style="color:black" for="days" id="number-label">How many days per week do you have available each day to dedicate towards fitness? <input type="text" id="days" name="information" placeholder="30 minutes" required></label>
+                        <label style="color:black" for="time">On those days, how much of your time is available for fitness?
+                                 <!-- value attribute allows there to be a useful value sent in when form is submitted -->
+
+                                <div class="dropdown">
+                                <button class="dropbtn">(select)</button>
+                                <div class="dropdown-content">
+                                   <a href="1">Less than 30 minutes</a>
+                                   <a href="2">1-2 hours</a>
+                                   <a href="3">3-5 hours</a>
+                                   <a href="4">More</a>
+                                </div>
+                               </div>
+                           </div>
+                        <label style="color:black" for="equipment">What equipment do you have available? 
+                          <div class="dropdown">
+                             <button class="dropbtn">(select)</button>
+                             <div class="dropdown-content">
+                                <a href="1">None</a>
+                                <a href="2">Minimal home equipment</a>
+                                <a href="3">Access to a gym</a>
+                             </div>
+                            </div>
+                            <p></p>
+                       <label for="goals">What are your personal goals? 
+                          <p></p>
+                       <textarea id="goal" rows="3" cols="30" placeholder="I want to lose weight.." name="information" required></textarea></label>
+                        <input type="submit" id="submit" value="Submit">
+                        <p></p>
+                       <label style="font-size: large;color:black" for="message"><i>Get ready to meet your goals!!!</i></label>
+                    </form> 
+                </fieldset>
+     </div>
+  <!-- information section end -->
 
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
