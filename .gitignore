@@ -2,6 +2,7 @@
 # prevents leakage of secret keys
 
 config.py
+<<<<<<< Updated upstream
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -31,3 +32,6 @@ MANIFEST
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
+=======
+.env
+>>>>>>> Stashed changes

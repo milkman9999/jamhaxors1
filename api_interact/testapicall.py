@@ -1,8 +1,8 @@
 import openai
-import config
-import api_interact.PromptHandler as PromptHandler
+# import config
+#import api_interact.PromptHandler as PromptHandler
 
-openai.api_key=config.API_KEY
+openai.api_key= "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"
 
 def gen_from_prompt(privprompt, temperature,):
     prompt = privprompt    
