@@ -155,6 +155,16 @@
                           <p></p>
                        <textarea id="goal" rows="3" cols="30" placeholder="I want to lose weight.." name="information" required></textarea></label>
                         <input type="submit" id="submit" value="Submit">
+                        <script>
+                           document.getElementById("submit").addEventListener("click", clickHandler);
+                              function clickHandler() {
+                                 console.log("clicked, sending form data with GET");
+                              }
+                              const req = new XMLHttpRequest();
+                                 req.addEventListener("load", clickHandler);
+                                 req.open("GET", "/form/");
+                                 req.send();
+                        </script>
                         <p></p>
                        <label style="font-size: large;color:black" for="message"><i>Get ready to meet your goals!!!</i></label>
                     </form> 
