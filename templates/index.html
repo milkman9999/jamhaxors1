@@ -91,16 +91,16 @@
                         <li class="nav-item">
                         </li>
                         <li class="nav-item">
-                           <a id="aboutButton" class="nav-link" href="about.html">My plans</a>
+                           <a id="aboutButton1" class="nav-link" href="about.html">Create a plan</a>
                            <script>
-                              document.getElementById("aboutButton").addEventListener("click", clickHandler);
-                                 function clickHandler() {
-                                    console.log("clicked, updating page");
-                                 }
-                                 const req = new XMLHttpRequest();
-                                    req.addEventListener("load", clickHandler);
-                                    req.open("POST", "/form/");
+                              window.onload = () => document.getElementById("aboutButton1").addEventListener("click", clickHandler);
+                              console.log("hello");   
+                              function clickHandler() {
+                                    console.log("clicked, sending you to /main/form");
+                                    req = new XMLHttpRequest();
+                                    req.open("GET", "/main/form");
                                     req.send();
+                                 }
                            </script>
                         </li>
                         <li class="nav-item">
@@ -114,7 +114,16 @@
                <div class="menu_main">
                   <ul>
                      <li class="active"><a href="index.html">Home</a></li>
-                     <li><a href="about.html">Create a plan</a></li>
+                     <li><a id="aboutButton2" href="about.html">Create a plan</a></li>
+                     <script>
+                        document.getElementById("aboutButton2").addEventListener("click", clickHandler2);
+                           function clickHandler2() {
+                              console.log("clicked, sending you to /main/form");
+                              req = new XMLHttpRequest();
+                              req.open("GET", "/main/form");
+                              req.send();
+                           }
+                     </script>
                      <li><a href="services.html">My plans</a></li>
                      <li><a href="blog.html">My progress</a></li>
                   </ul>

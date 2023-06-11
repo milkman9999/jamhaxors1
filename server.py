@@ -1,36 +1,48 @@
+import json
 from flask import Flask, request, render_template, jsonify
 import sys
+import api_interact.ApiHandler
 
 app = Flask(__name__)
 
 @app.route("/main")
-def initialize_the_boy():
-    print('initailize the boy')
+def initialize_main():
+    print('[MAIN] initailizing MAIN')
     return render_template("index.html")
     
 
-@app.get("/form/")
+@app.post("/main/form")
 def get_form():
-    if request.method == "GET":
-       print('in get req')
+    if request.method == "POST":
+       print('[FORM] POST request logged to /main/form')
        # getting inputs from html form index
        age = request.form.get("age")
        weight = request.form.get("weight")
        sex = request.form.get("sex")
-       days = request.form.get("days")
+       daysavailable = request.form.get("daysavailable")
        time = request.form.get("time")
        equipment = request.form.get("equipment")
        print(age)
        print(weight)
        print(time)
        print(equipment)
-       return jsonify({'age':age, 'weight':weight, 'sex':sex, 'days':days, 'time':time, 'equipment':equipment})
+       responseJSON = jsonify({'age':age, 'weight':weight, 'sex':sex, 'days available':daysavailable, 'time':time, 'equipment':equipment})
+       responseStr = responseJSON.get_data(as_text=True)
+       openResponse=(api_interact.ApiHandler.gen_from_prompt(("Create a personalized workout plan for an individual of {}".format(responseStr)), 0.5, 1000))
+    #    if(api_interact.ApiHandler.response_check(openResponse, 0.5, 5)):
+    #           print(openResponse)
+    #           print("Response contains list")
+    #           return openResponse
+    # else:
+    #             print("Model failed to generate list")
+    #             return "Error while generating, please retry."
+       return openResponse
 
-@app.post("/form/")
-def post_form():
-    if request.method == "POST":
-       print('logged post request to /form/!')
-       # do nothing for now, just log to console pls
+@app.get("/main/form")
+def initialize_form():
+    print('[FORM] initailize FORM')
+    return render_template("about.html")
+       
  
 if __name__=='__main__':
    print('running app...', file=sys.stdout)

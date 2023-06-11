@@ -125,45 +125,45 @@
                  </div>
               </div>
                  <fieldset>
-                    <form id = "information-form" method="get">
-                        <label style="color:black" for="age" id="number-label">Age: <input type="number" id="number" min="5" max="100" name="information" placeholder="Age" style="color:black;" required></label>
-                        <label style="color:black" for="weight" id="number-label">Weight (kg): <input type="number" id="number" min="0" max="200" name="information" placeholder="Weight" style="color:black" required></label>
-                        <label style="color:black" for="sex" id="number-label">Sex: <input type="text" id="sex" name="information" placeholder="Female" required></label>
-                        <label style="color:black" for="days" id="number-label">How many days per week do you have available each day to dedicate towards fitness? <input type="text" id="days" name="information" placeholder="30 minutes" required></label>
+                    <form name="information-form" id = "information-form" method="post">
+                        <label style="color:black" for="age" id="number-label">Age: <input type="number" id="number" min="5" max="100" name="age" placeholder="Age" style="color:black;" required></label>
+                        <label style="color:black" for="weight" id="number-label">Weight (kg): <input type="number" id="number" min="0" max="200" name="weight" placeholder="Weight" style="color:black" required></label>
+                        <label style="color:black" for="sex" id="number-label">Sex: <input type="text" id="sex" name="sex" placeholder="Female" required></label>
+                        <label style="color:black" for="daysavailable" id="number-label">How many days per week do you have available each day to dedicate towards fitness? <input type="text" id="daysavailable" name="daysavailable" placeholder="2" required></label>
                         <label style="color:black" for="time">On those days, how much of your time is available for fitness?
                                  <!-- value attribute allows there to be a useful value sent in when form is submitted -->
                                  
-                                 <select id="time" name="information">
+                                 <select id="time" name="time">
                                     <!--value attribute allows there to be a useful value sent in when form is submitted-->
                                     <option value="">(select one)</option>
-                                    <option value="1">Less than 30 minutes</option>
-                                    <option value="2">1-2 hours</option>
-                                    <option value="3">3-5 Hours</option>
-                                    <option value="4">More</option>
+                                    <option value="Less than 30 minutes available on days for fitness">Less than 30 minutes</option>
+                                    <option value="1-2 hours available on days for fitness">1-2 hours</option>
+                                    <option value="3-5 hours available on days for fitness">3-5 Hours</option>
+                                    <option value="More than 5 hours available on days for fitness">More</option>
                                 </select>
 
                         <label style="color:black" for="equipment">What equipment do you have available? 
-                            <select id="equipment" name="information">
+                            <select id="equipment" name="equipment">
                                 <!--value attribute allows there to be a useful value sent in when form is submitted-->
                                 <option value="">(select one)</option>
-                                <option value="1">None</option>
-                                <option value="2">Minimal home equipment</option>
-                                <option value="3">Access to a gym</option>
+                                <option value="No access to equipment">None</option>
+                                <option value="Minimal access to home equipment">Minimal home equipment</option>
+                                <option value="Full access to a gym">Access to a gym</option>
                             </select>
                             <p></p>
                        <label for="goals">What are your personal goals? 
                           <p></p>
-                       <textarea id="goal" rows="3" cols="30" placeholder="I want to lose weight.." name="information" required></textarea></label>
+                       <textarea id="goal" rows="3" cols="30" placeholder="I want to lose weight.." name="goal" required></textarea></label>
                         <input type="submit" id="submit" value="Submit">
                         <script>
-                           document.getElementById("submit").addEventListener("click", clickHandler);
+                           window.onload = () => document.getElementById("submit").addEventListener("click", clickHandler);
                               function clickHandler() {
-                                 console.log("clicked, sending form data with GET");
+                                 console.log("form clicked, submitting data");
+                                 reqdata = new FormData(document.forms.information-form)
+                                 req = new XMLHttpRequest();
+                                 req.open("POST", "/main/form");
+                                 req.send(reqdata);
                               }
-                              const req = new XMLHttpRequest();
-                                 req.addEventListener("load", clickHandler);
-                                 req.open("GET", "/form/");
-                                 req.send();
                         </script>
                         <p></p>
                        <label style="font-size: large;color:black" for="message"><i>Get ready to meet your goals!!!</i></label>
