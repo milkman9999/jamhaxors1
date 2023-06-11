@@ -1,3 +1,4 @@
+<!--THIS IS THE CREATE A WORKOUT SECTION-->
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -38,7 +39,6 @@
          <div class="header_main">
             <div class="mobile_menu">
                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                  <div class="logo_mobile"><a href="index.html"><img src="images/logo.png"></a></div>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                   </button>
@@ -64,69 +64,62 @@
                </nav>
             </div>
             <div class="container-fluid">
-               <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
                <div class="menu_main">
                   <ul>
                      <li class="active"><a href="index.html">Home</a></li>
-                     <li><a href="about.html">About</a></li>
-                     <li><a href="services.html">Services</a></li>
-                     <li><a href="blog.html">Blog</a></li>
-                     <li><a href="contact.html">Contact us</a></li>
+                     <li><a href="about.html">Create a plan</a></li>
+                     <li><a href="services.html">My plans</a></li>
+                     <li><a href="blog.html">My progress</a></li>
                   </ul>
                </div>
             </div>
          </div>
       </div>
       <!-- header section end -->
-      <!-- about section start -->
-      <div class="about_section layout_padding">
-         <div class="container-fluid">
-            <div class="row">
-               <div class="col-md-6">
-                  <div class="about_taital_main">
-                     <h1 class="about_taital">About Us</h1>
-                     <p class="about_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All </p>
-                     <div class="readmore_bt"><a href="#">Read More</a></div>
-                  </div>
-               </div>
-               <div class="col-md-6 padding_right_0">
-                  <div><img src="images/about-img.png" class="about_img"></div>
-               </div>
+      <!-- information section start -->
+            <div class="services_section layout_padding">
+               <div class="container">
+                  <h1 class="services_taital">Create a workout plan </h1>
+                  <p class="services_text">Answer the following questions to the best of your ability</p>
+                  <div class="services_section_2">
+                     <div class="row">
+                        <div class="col-md-4">
+                           <div><img src="images/muscledude.png" class="services_img"></div>
+                        </div>
+                     </div>
+                        <fieldset>
+                           <form id = "information-form" method="get">
+                               <label for="age" id="number-label">Age: <input type="number" id="number" min="5" max="100" name="information" placeholder="Age" required></label>
+                               <label for="weight" id="number-label">Weight (kg): <input type="number" id="number" min="0" max="200" name="information" placeholder="Weight" required></label>
+                               <label for="sex" id="number-label">Sex: <input type="text" id="sex" name="information" placeholder="Female" required></label>
+                               <label for="days" id="number-label">How many days per week do you have available each day to dedicate towards fitness?: <input type="text" id="days" name="information" placeholder="" required></label>
+                               <label for="time">On those days, how much of your time is available for fitness?
+                                  <select id="time" name="information"> 
+                                        <!-- value attribute allows there to be a useful value sent in when form is submitted -->
+                                      <option value="">(select one)</option>
+                                          <option value="1">Less than 30 minutes</option>
+                                          <option value="2">1-2 hours</option>
+                                          <option value="3">3-5 Hours</option>
+                                          <option value="4">More</option>
+                                   </select>
+                                  </div>
+                               <label></label>
+                               <label for="equipment">What equipment do you have available? 
+                                   <select id="equipment" name="information">
+                                   <option value="">(select one)</option>"
+                                   <option value="1">None</option>
+                                   <option value="2">Minimal home equipment</option>
+                                   <option value="3">Access to a gym</option>
+                               </select> 
+                               <label></label>
+                               <label for="goal">Goal(s):<textarea id="goal" rows="3" cols="30" placeholder="I want to lose weight.." name="information" required></textarea></label>
+               
+                               <input type="submit" id="submit" value="Submit">
+                           </form> 
+                       </fieldset>
             </div>
-         </div>
-      </div>
-      <!-- about section end -->
-      <!-- footer section start -->
-      <div class="footer_section layout_padding">
-         <div class="container">
-            <div class="input_btn_main">
-               <input type="text" class="mail_text" placeholder="Enter your email" name="Enter your email">
-               <div class="subscribe_bt"><a href="#">Subscribe</a></div>
-            </div>
-            <div class="location_main">
-               <div class="call_text"><img src="images/call-icon.png"></div>
-               <div class="call_text"><a href="#">Call +01 1234567890</a></div>
-               <div class="call_text"><img src="images/mail-icon.png"></div>
-               <div class="call_text"><a href="#">demo@gmail.com</a></div>
-            </div>
-            <div class="social_icon">
-               <ul>
-                  <li><a href="#"><img src="images/fb-icon.png"></a></li>
-                  <li><a href="#"><img src="images/twitter-icon.png"></a></li>
-                  <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
-                  <li><a href="#"><img src="images/instagram-icon.png"></a></li>
-               </ul>
-            </div>
-         </div>
-      </div>
-      <!-- footer section end -->
-      <!-- copyright section start -->
-      <div class="copyright_section">
-         <div class="container">
-            <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
-         </div>
-      </div>
-      <!-- copyright section end -->
+         <!-- information section end -->
+
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
