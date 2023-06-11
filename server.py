@@ -7,10 +7,10 @@ app = Flask(__name__)
 def initialize_the_boy():
     print('initailize the boy')
     return render_template("index.html")
+    
 
-@app.route('/form/', methods =["GET", "POST"])
-def gfg():
-    print('in gfg')
+@app.get("/form/")
+def get_form():
     if request.method == "GET":
        print('in get req')
        # getting inputs from html form index
@@ -25,19 +25,12 @@ def gfg():
        print(time)
        print(equipment)
        return jsonify({'age':age, 'weight':weight, 'sex':sex, 'days':days, 'time':time, 'equipment':equipment})
+
+@app.post("/form/")
+def post_form():
     if request.method == "POST":
-       print('in post req')
-       # getting inputs from html form index
-       age = request.form.get("age")
-       weight = request.form.get("weight")
-       sex = request.form.get("sex")
-       days = request.form.get("days")
-       time = request.form.get("time")
-       print(age)
-       print(weight)
-       print(time)
-       return jsonify({'age':age, 'weight':weight, 'sex':sex, 'days':days, 'time':time})
-    #    return "your info: age ="+age+", weight ="+weight+", sex ="+sex+", days ="+days+", time ="+time
+       print('logged post request to /form/!')
+       # do nothing for now, just log to console pls
  
 if __name__=='__main__':
    print('running app...', file=sys.stdout)

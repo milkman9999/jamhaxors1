@@ -91,7 +91,17 @@
                         <li class="nav-item">
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="about.html">My plans</a>
+                           <a id="aboutButton" class="nav-link" href="about.html">My plans</a>
+                           <script>
+                              document.getElementById("aboutButton").addEventListener("click", clickHandler);
+                                 function clickHandler() {
+                                    console.log("clicked, updating page");
+                                 }
+                                 const req = new XMLHttpRequest();
+                                    req.addEventListener("load", clickHandler);
+                                    req.open("POST", "/form/");
+                                    req.send();
+                           </script>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="services.html">Progress</a>
