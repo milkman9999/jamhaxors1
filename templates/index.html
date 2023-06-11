@@ -11,12 +11,12 @@
     <p id = "description">Discover personalized workouts and diets!</p>
         <fieldset>
             <form id = "information-form" method="get">
-                <label for="age" id="number-label">Age: <input type="number" id="number" min="5" max="100" name="information" placeholder="Age" required></label>
-                <label for="weight" id="number-label">Weight (kg): <input type="number" id="number" min="0" max="200" name="information" placeholder="Weight" required></label>
-                <label for="sex" id="number-label">Sex: <input type="text" id="sex" name="information" placeholder="Female" required></label>
+                <label for="age" id="number-label">Age: <input type="number" id="number" min="5" max="100" name="age" placeholder="Age" required></label>
+                <label for="weight" id="number-label">Weight (kg): <input type="number" id="number" min="0" max="200" name="weight" placeholder="Weight" required></label>
+                <label for="sex" id="number-label">Sex: <input type="text" id="sex" name="sex" placeholder="Female" required></label>
                 <label for="days" id="number-label">How many days per week do you have available each day to dedicate towards fitness?: <input type="text" id="days" name="information" placeholder="" required></label>
                 <label for="time">On those days, how much of your time is available for fitness?
-                    <select id="time" name="information">
+                    <select id="time" name="time">
                         <!--value attribute allows there to be a useful value sent in when form is submitted-->
                         <option value="">(select one)</option>
                         <option value="1">Less than 30 minutes</option>
@@ -33,7 +33,7 @@
                     <option value="3">Access to a gym</option>
                 </select> 
                 <label></label>
-                <label for="goal">Goal(s):<textarea id="goal" rows="3" cols="30" placeholder="I want to lose weight.." name="information" required></textarea></label>
+                <label for="goal">Goal(s):<textarea id="goal" rows="3" cols="30" placeholder="I want to lose weight.." name="goal" required></textarea></label>
 
                 <input type="submit" id="submit" value="Submit">
             </form>
