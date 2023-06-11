@@ -19,10 +19,12 @@ def gfg():
        sex = request.form.get("sex")
        days = request.form.get("days")
        time = request.form.get("time")
+       equipment = request.form.get("equipment")
        print(age)
        print(weight)
        print(time)
-       return jsonify({'age':age, 'weight':weight, 'sex':sex, 'days':days, 'time':time})
+       print(equipment)
+       return jsonify({'age':age, 'weight':weight, 'sex':sex, 'days':days, 'time':time, 'equipment':equipment})
     if request.method == "POST":
        print('in post req')
        # getting inputs from html form index
